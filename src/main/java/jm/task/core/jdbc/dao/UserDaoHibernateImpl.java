@@ -35,10 +35,9 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void createUsersTable() {
         String SQL = "CREATE TABLE IF NOT EXISTS users " +
-                "(id bigint primary key auto_increment, name varchar(255), lastname varchar(255), age tinyint)";
+                "(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age INT)";
         SQLQuery(SQL);
     }
-
 
     @Override
     public void dropUsersTable() {
@@ -95,8 +94,6 @@ public class UserDaoHibernateImpl implements UserDao {
         }
         return users;
     }
-
-
 
     @Override
     public void cleanUsersTable() {
