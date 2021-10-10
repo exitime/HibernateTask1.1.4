@@ -38,20 +38,7 @@ public class UserDaoHibernateImpl implements UserDao {
                 "(id bigint primary key auto_increment, name varchar(255), lastname varchar(255), age tinyint)";
         SQLQuery(SQL);
     }
-//        Session s = sessionFactory.openSession();
-//        Transaction t = s.beginTransaction();
-//        try {
-//            s.createSQLQuery("CREATE TABLE IF NOT EXISTS users " +
-//                    "(id INT PRIMARY KEY AUTO_INCREMENT, " +
-//                    "name VARCHAR(45), " +
-//                    "lastname VARCHAR(45), " +
-//                    "age INT);").executeUpdate();
-//            t.commit();
-//        } catch (HibernateException e) {
-//            t.rollback();
-//        } finally {
-//            s.close();
-//        }
+
 
     @Override
     public void dropUsersTable() {
